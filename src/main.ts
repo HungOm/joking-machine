@@ -17,9 +17,8 @@ async function getJoke(url:string){
       joke = data.joke
     }
     await tellJoke(joke);
-
-    //disable button
-    toggleButton()
+      //disable button
+      toggleButton()
   }catch(err){
     console.log(err)
   }
@@ -32,7 +31,7 @@ function toggleButton():void{
   button.disabled = !button.disabled;
 
 }
-async function tellJoke(joke:string|undefined){
+async function tellJoke(joke:string|undefined):Promise<void>{
   if(joke==undefined){
     joke = "Sorry, I cant get my joke now for some unattainable reason"
   }
@@ -48,8 +47,17 @@ async function tellJoke(joke:string|undefined){
     audio:audio
 });
 }
+button
+
+
 button.addEventListener('click',()=>{
-  getJoke(jokeUrl)
+    
+      getJoke(jokeUrl)
 })
+
+// window.addEventListener('load',()=>{
+//   getJoke(jokeUrl)
+
+// })
 
 audio.addEventListener('ended',toggleButton)
