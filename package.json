@@ -1,0 +1,17 @@
+{
+  "name": "joking-machine",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.2",
+    "vite": "^2.6.4",
+    "request": "~2.72.0"
+  },
+  "dependencies": {
+    "@types/node": "^16.10.9"
+  }
+}
