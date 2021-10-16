@@ -50,7 +50,7 @@ button:hover{
 }
 button:disabled{
   cursor: default;
-  filter: brightness(30%);
+  filter: brightness(50%);
 }
 @media screen and (max-width:1000px) {
 
